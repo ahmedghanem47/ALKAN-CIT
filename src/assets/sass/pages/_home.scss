@@ -1,0 +1,189 @@
+.k-scheduler-table th {
+    background-color: #F1E9E6;
+}
+
+.k-scheduler-toolbar {
+    background-color: #E3D4CD !important;
+}
+
+.k-button-solid-base {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.nav-tabs {
+    padding-inline-start: 8rem;
+    border-bottom: 4px solid #20685A;
+    background-color: #002e2b;
+
+    #nav-home-tab {
+        button {
+            border: none;
+            background-color: transparent;
+
+            .material-icons {
+                color: #fff;
+                background-color: #20685A;
+                border-radius: 50%;
+                width: 36px;
+                height: 36px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    .nav-link {
+        color: #fff;
+    }
+
+    .nav-link.active {
+        border-color: #236D59;
+        border-width: 4px;
+        border-bottom: 0;
+        background-color: #F1EAE4;
+    }
+
+}
+
+.missions-container {
+    .filter-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+
+        .search-bar {
+            flex: 1;
+            margin-right: 8px;
+        }
+    }
+
+    .mission-item {
+        margin-bottom: 16px;
+        margin-inline-end: 0.3rem;
+
+        .mission-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h3 {
+                margin: 0;
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                margin-bottom: 0.5rem;
+                font-size: 0.9rem;
+                color: gray;
+            }
+        }
+
+        .chips-section {
+            margin-top: 8px;
+
+            mat-chip {
+                margin-right: 4px;
+            }
+
+            .mat-accent {
+
+                .mdc-evolution-chip__cell--primary {
+                    background-color: #E1F2FF;
+                    border: 1px solid #8CA5D3;
+
+                    .mdc-evolution-chip__text-label {
+                        color: #8CA5D3;
+
+                    }
+                }
+            }
+
+            .mat-pending {
+                .mdc-evolution-chip__cell--primary {
+                    background-color: #FFF3DF;
+                    border: 1px solid #F0CEA1;
+
+                    .mdc-evolution-chip__text-label {
+                        color: #F0CEA1;
+
+                    }
+                }
+            }
+
+            .mat-primary {
+
+                .mdc-evolution-chip__cell--primary {
+                    background-color: #C82C38;
+                    border: 1px solid #991d23;
+
+                    .mdc-evolution-chip__text-label {
+                        color: #fff;
+
+                    }
+                }
+            }
+
+            .mdc-evolution-chip__cell--primary {
+                background-color: #E5D0C5;
+                border-radius: 20px;
+            }
+
+            .mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled) .mdc-evolution-chip__action--primary::before {
+                border: 0;
+            }
+        }
+    }
+}
+
+.mat-menu-panel {
+    z-index: 1000;
+}
+
+.view-toggle {
+    display: flex;
+    gap: 8px;
+
+    button {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+
+        &.active {
+            background-color: #1976d2;
+            color: white;
+            border-color: #1976d2;
+
+            mat-icon {
+                color: white;
+            }
+        }
+
+        &:hover {
+            background-color: #f5f5f5;
+        }
+    }
+}
+
+.view-content {
+    margin-top: 16px;
+}
+
+.grid-icons {
+    .view-icon {
+        border: 1px solid #978277 !important;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #978277 !important;
+
+    }
+
+    .view-icon.active {
+        color: #fff !important;
+        background-color: #978277 !important;
+    }
+}

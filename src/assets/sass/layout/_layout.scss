@@ -1,0 +1,159 @@
+.wrapper {
+    overflow-x: hidden;
+}
+
+.main-content {
+    background-color: #f0e9e4;
+    height: 100%;
+
+    .layout-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; // Adjust columns for responsiveness
+        gap: 16px;
+        padding: 1rem;
+
+        .grid-card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+
+            .mission-card-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h3 {
+                    font-size: 1rem;
+                    color: $primary;
+                    margin-bottom: 0;
+                    font-weight: bold;
+                }
+
+                button {
+                    background-color: transparent;
+                    border: none;
+                }
+            }
+        }
+
+        .map-card {
+            border: 1px solid $primary;
+            padding: 0;
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    mat-card {
+        background-color: #fff;
+        padding: 1rem;
+        border: 1px solid #dddddd75;
+    }
+
+    .filter-section {
+        background-color: #E3D4CD !important;
+        padding: 0.2rem 0.5rem;
+        border-radius: 0;
+
+        .form-control {
+            border-radius: 30px;
+            min-width: 300px;
+            border: 1px solid;
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+
+        ::placeholder {
+            font-size: 0.8rem;
+        }
+
+        span {
+            color: #777373;
+            font-size: 0.8rem;
+        }
+
+        .mat-icon {
+            color: #BBAEA5;
+        }
+    }
+
+    .missions-container {
+        max-height: 600px;
+        overflow: auto;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #EFF4F8;
+            border-radius: 10px;
+        }
+    }
+
+}
+
+:host {
+    display: block;
+    padding: 16px;
+
+    mat-card {
+        margin: 16px;
+    }
+
+    mat-card-content {
+        overflow: auto;
+        max-height: 400px;
+        /* Adjust as needed */
+    }
+}
+
+.mat-mdc-menu-content {
+    .mat-mdc-menu-item {
+        border-bottom: 1px solid #ddd;
+        min-height: 30px;
+
+        .mat-mdc-menu-item-text {
+            color: #002E2B;
+        }
+
+        &:last-child {
+            .mat-mdc-menu-item-text {
+                color: #D31B0A;
+            }
+        }
+    }
+}
+
+.map-container {
+    height: 500px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.calendar-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+    .map-container {
+        height: 500px !important;
+    }
+
+    .main-content .filter-section .form-control {
+        min-width: auto;
+    }
+
+    .main-content .filter-section span {
+        display: none;
+    }
+}

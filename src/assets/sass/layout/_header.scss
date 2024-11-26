@@ -1,0 +1,24 @@
+.header-content {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: $primary;
+    height: 4rem;
+
+    .header-actions {
+        display: flex;
+        gap: 16px;
+    }
+
+    .mat-icon {
+        color: $white;
+        fill: #f7f7f7;
+    }
+
+    .account-info {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        font-size: 0.8rem;
+    }
+}

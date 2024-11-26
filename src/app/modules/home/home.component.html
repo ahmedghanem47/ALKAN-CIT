@@ -1,0 +1,75 @@
+<div class="main-content">
+    <!--tabs-->
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
+                role="tab" aria-controls="nav-home" aria-selected="true"> <button mat-icon-button aria-label="home">
+                    <mat-icon>home</mat-icon>
+                </button></button>
+            <button class="nav-link active d-flex align-items-center justify-content-between gap-4" id="nav-contact-tab"
+                data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
+                aria-selected="false">Missions
+                <mat-icon>close</mat-icon></button>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade " id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"></div>
+        <!--missions tab-->
+        <div class="tab-pane fade show active" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+            <div class="layout-grid">
+                <div class="grid-card">
+                    <div class="mission-card-header px-3">
+                        <h3>Missions (55)</h3>
+                        <div class="d-flex gap-2 grid-icons">
+                            <button mat-icon-button class="view-icon" (click)="setView('list')"
+                                [class.active]="currentView === 'list'">
+                                <mat-icon>view_list</mat-icon>
+                            </button>
+
+                            <!-- Grid View Button -->
+                            <button mat-icon-button class="view-icon" (click)="setView('grid')"
+                                [class.active]="currentView === 'grid'">
+                                <mat-icon>grid_view</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="chevron_left">
+                                <mat-icon>chevron_left</mat-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <!--Mission list-->
+                    <div class="view-content">
+                        <!-- List View Content -->
+                        <div *ngIf="currentView === 'list'" class="list-view">
+                            <app-mission></app-mission>
+
+                        </div>
+
+                        <!-- Grid View Content -->
+                        <div *ngIf="currentView === 'grid'" class="grid-view">
+                            <p>Grid View Content</p>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="grid-card ">
+                    <div class="mission-card-header px-3">
+                        <h3>Scheduled (55)</h3>
+                        <div class="d-flex gap-2">
+                            <button mat-icon-button aria-label="chevron_left">
+                                <mat-icon>chevron_left</mat-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <!--calender-->
+                    <app-calendar></app-calendar>
+                </div>
+                <div class="grid-card map-card">
+                    <!--map-->
+                    <map></map>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

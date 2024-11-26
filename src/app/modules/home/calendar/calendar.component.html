@@ -1,0 +1,9 @@
+<!-- <div class="calendar-container">
+    <calendar-month-view [viewDate]="viewDate" [events]="events"></calendar-month-view>
+</div> -->
+<kendo-scheduler [kendoSchedulerBinding]="events" [selectedViewIndex]="1" style="height: 650px;">
+    <kendo-scheduler-day-view startTime="07:00"> </kendo-scheduler-day-view>
+
+    <kendo-scheduler-month-view [eventHeight]="30">
+    </kendo-scheduler-month-view>
+</kendo-scheduler>

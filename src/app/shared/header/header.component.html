@@ -1,0 +1,33 @@
+<header mat-toolbar color="primary">
+    <div class="header-content">
+
+        <div class="header-actions">
+            <button mat-icon-button aria-label="Notifications">
+                <mat-badge [hidden]="false" matBadge="10" matBadgeColor="accent">
+                    <mat-icon>notifications</mat-icon>
+                </mat-badge>
+            </button>
+            <button mat-icon-button aria-label="Language">
+                <mat-icon>language</mat-icon>
+            </button>
+            <button mat-icon-button aria-label="info">
+                <mat-icon>info</mat-icon>
+            </button>
+            <div class="d-flex align-items-center">
+
+                <button mat-icon-button aria-label="Profile">
+
+                    <mat-icon>account_circle</mat-icon>
+                </button>
+                <div class="account-info">
+                    <span>Managercs</span>
+                    <span>Dcc Manager</span>
+                </div>
+            </div>
+
+            <button mat-icon-button aria-label="Logout">
+                <mat-icon>logout</mat-icon>
+            </button>
+        </div>
+    </div>
+</header>

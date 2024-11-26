@@ -1,0 +1,44 @@
+<mat-card class="filter-section flex-row justify-content-between mb-2">
+    <button mat-icon-button>
+        <mat-icon>filter_list</mat-icon>
+    </button>
+    <div class="search-input">
+        <input type="text" placeholder="Search" class="form-control" />
+        <mat-icon>search</mat-icon>
+
+    </div>
+    <div class="d-flex  align-items-center">
+        <span>By Date</span>
+        <button mat-icon-button>
+            <mat-icon>arrow_downward</mat-icon>
+        </button>
+    </div>
+</mat-card>
+<!--missions cards-->
+<div class="missions-container">
+    <mat-card class="mission-item" *ngFor="let mission of missions">
+        <div class="mission-header">
+            <div>
+                <h3>{{ mission.title }}</h3>
+                <p>{{ mission.category }}</p>
+            </div>
+            <button mat-icon-button [matMenuTriggerFor]="menu" [disabled]="menuOpen" (click)="menuOpen = true">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" (closed)="menuOpen = false">
+                <button mat-menu-item>Details</button>
+                <button mat-menu-item>Edit</button>
+                <button mat-menu-item>Cancel</button>
+            </mat-menu>
+
+        </div>
+        <div class="chips-section">
+            <mat-chip *ngFor="let chip of mission.statuses" [color]="chip.color" selected>
+                {{ chip.label }}
+            </mat-chip>
+        </div>
+    </mat-card>
+
+</div>
+<!--pagination-->
+<mat-paginator [length]="55" [pageSize]="5" [pageSizeOptions]="[5, 10, 20]"></mat-paginator>
